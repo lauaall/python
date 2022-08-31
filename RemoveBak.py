@@ -2,8 +2,20 @@
 import os
 
 def main():
+    print("------------------------------")
+    print("Custom Extension Remover")
+    print("Created by lauaall")
+    print("------------------------------")
     directory = input("Enter a directory: ")
+    if directory == "" :
+        print("")
+        print("Error!, No directory specified.")
+        exit()
     extension = input("Enter a file extension(without .): ")
+    if extension == "" :
+        print("")
+        print("Error!, No extension specified.")
+        exit()
     print("")
     os.chdir(directory)
     files = os.listdir(directory)
